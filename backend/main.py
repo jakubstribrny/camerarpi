@@ -6,17 +6,22 @@ import subprocess
 app = FastAPI()
 
 def generate_frames():
-    # Použití přímo kamery přes libcamera: alternativa k camerarpi
     cap = cv2.VideoCapture(0)
     if not cap.isOpened():
-        raise RuntimeError("Camera not accessible")
+        print("❌ Kamera se neotevřela!")
+        return
+
+    print("✅ Kamera OK, začínám stream...")
     while True:
         ret, frame = cap.read()
         if not ret:
+            print("❌ Frame se nepodařilo přečíst")
             break
-        _, buf = cv2.imencode('.jpg', frame)
+        _, buffer = cv2.imencode('.jpg', frame)
+        jpg_bytes = buffer.tobytes()
         yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + buf.tobytes() + b'\r\n')
+               b'Content-Type: image/jpeg\r\n\r\n' + jpg_bytes + b'\r\n')
+
 
 @app.get("/video_feed")
 def video_feed():
