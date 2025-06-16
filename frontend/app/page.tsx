@@ -6,10 +6,21 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
 
         <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Project <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-500 from-green-300">LCMR01</span></h1>
-        <p className="font-normal text-gray-300 lg:text-xl dark:text-gray-400">Low-Cost Camera</p>
-        <p className="font-normal text-gray-300 lg:text-xl dark:text-gray-400">FastAPI & Next.js</p>
+        <p className="text-lg font-normal text-gray-300 lg:text-xl dark:text-gray-400">Low-Cost Camera</p>
+        <p className="text-lg font-normal text-gray-300 lg:text-xl dark:text-gray-400">FastAPI & Next.js</p>
 
-        <img src="http://172.20.10.5:8000/video_feed" alt="Pi camera stream" />
+        <div className="w-full text-center">
+          <img
+            src="http://172.20.10.5:8000/video_feed"
+            alt="Pi camera stream"
+            className="mx-auto"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.outerHTML = `<div class='text-gray-200 text-center'>Pi camera stream not available</div>`;
+            }}
+          />
+      </div>
+
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
         </div>
@@ -24,6 +35,8 @@ export default function Home() {
           <Image
             aria-hidden
             src="/github.svg"
+
+    items-center ve flex
             alt="Github icon"
             width={16}
             height={16}
