@@ -48,7 +48,7 @@ CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-la
    # On your Pi
    sudo apt update && sudo apt install python3-pip libatlas-base-dev
    pip3 install fastapi uvicorn opencv-python
-
+   ```
 3. **Configure & Run Backend**
 
 # Set your camera ID or URL in .env
@@ -56,13 +56,15 @@ CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-la
     # Set your camera ID or URL in .env
     cp .env.example .env
     uvicorn main:app --host 0.0.0.0 --port 8000
+  ```
 
-  4. **Launch Frontend**
+4. **Launch Frontend**
      ```bash
       cd frontend
       npm install
       npm run dev
       # Visit http://localhost:3000
+     ```
 
 🔌 API Endpoints
 Route	Method	Description
