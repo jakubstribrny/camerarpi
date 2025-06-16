@@ -48,3 +48,51 @@ CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-la
    # On your Pi
    sudo apt update && sudo apt install python3-pip libatlas-base-dev
    pip3 install fastapi uvicorn opencv-python
+
+3. **Configure & Run Backend**
+
+# Set your camera ID or URL in .env
+  ```bash
+    # Set your camera ID or URL in .env
+    cp .env.example .env
+    uvicorn main:app --host 0.0.0.0 --port 8000
+
+  4. **Launch Frontend**
+     ```bash
+      cd frontend
+      npm install
+      npm run dev
+      # Visit http://localhost:3000
+
+🔌 API Endpoints
+Route	Method	Description
+/api/stream	GET	MJPEG live stream
+/api/snapshot	GET	Single JPEG snapshot
+/api/config	GET/POST	View or update camera settings
+/api/archive	GET	List & download past captures
+<details> <summary>Example: Snapshot</summary>
+
+curl http://<PI_IP>:8000/api/snapshot --output latest.jpg
+
+</details>
+🏗️ Architecture
+
+    Raspberry Pi + USB Cam ↔️ FastAPI Server
+
+    FastAPI ↔️ Next.js Frontend (React + Tailwind)
+
+    Optional: S3 / NFS for long-term storage
+
+🤝 Contributing
+
+    Fork & clone
+
+    Create a feature branch
+
+    Open a PR—let’s discuss your idea!
+
+📄 License
+
+Distributed under the MIT License. See LICENSE for details.
+
+    Built with passion by Kuba “argent_dis” S. — bringing high-end monitoring to life 🚀
