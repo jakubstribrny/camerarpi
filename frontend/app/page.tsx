@@ -35,8 +35,6 @@ export default function Home() {
           <Image
             aria-hidden
             src="/github.svg"
-
-    items-center ve flex
             alt="Github icon"
             width={16}
             height={16}
