@@ -30,8 +30,6 @@ CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-la
   High-performance, async endpoints for camera control & image management  
 - **Next.js Frontend**  
   Responsive UI with TailwindCSS, dark mode ready  
-- **Edge & Cloud Flexibility**  
-  Run fully on-premise or behind your VPN, or deploy frontend on Vercel/CFR  
 - **Modular & Extensible**  
   Plug-in architecture for analytics, motion detection, or RPi GPIO triggers  
 
@@ -41,17 +39,16 @@ CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-la
 
 1. **Flash & Boot**  
    - Flash Raspberry Pi OS to your SD card  
-   - Boot up and ensure network connectivity  
-
+   - Boot up and ensure network connectivity
+   - 
 2. **Install Dependencies**  
    ```bash
    # On your Pi
    sudo apt update && sudo apt install python3-pip libatlas-base-dev
    pip3 install fastapi uvicorn opencv-python
    ```
+   
 3. **Configure & Run Backend**
-
-# Set your camera ID or URL in .env
   ```bash
     # Set your camera ID or URL in .env
     cp .env.example .env
@@ -73,8 +70,6 @@ Route	Method	Description
 /api/config	GET/POST	View or update camera settings
 /api/archive	GET	List & download past captures
 <details> <summary>Example: Snapshot</summary>
-
-curl http://<PI_IP>:8000/api/snapshot --output latest.jpg
 
 </details>
 🏗️ Architecture
