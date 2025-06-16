@@ -1,4 +1,4 @@
-<h1 align="center">📸 CameraRPI</h1>
+<h1 align="center">📸 CameraRPI - Project LCMR01</h1>
 <p align="center">
   <i>A cost-effective, industrial-grade monitoring solution powered by Raspberry Pi, FastAPI & Next.js</i>
 </p>
@@ -84,18 +84,6 @@ CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-la
 
     FastAPI ↔️ Next.js Frontend (React + Tailwind)
 
-    Optional: S3 / NFS for long-term storage
-
-🤝 Contributing
-
-    Fork & clone
-
-    Create a feature branch
-
-    Open a PR—let’s discuss your idea!
-
-📄 License
-
-Distributed under the MIT License. See LICENSE for details.
+🤝 Work done by
 
     Built with passion by Jakub S. — bringing high-end monitoring to life 🚀
