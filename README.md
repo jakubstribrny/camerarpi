@@ -40,13 +40,13 @@ CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-la
 1. **Flash & Boot**  
    - Flash Raspberry Pi OS to your SD card  
    - Boot up and ensure network connectivity
-   - 
+     
 2. **Install Dependencies**  
-   ```bash
+ ```bash
    # On your Pi
    sudo apt update && sudo apt install python3-pip libatlas-base-dev
    pip3 install fastapi uvicorn opencv-python
-   ```
+ ```
    
 3. **Configure & Run Backend**
   ```bash
@@ -56,19 +56,25 @@ CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-la
   ```
 
 4. **Launch Frontend**
-     ```bash
-      cd frontend
-      npm install
-      npm run dev
-      # Visit http://localhost:3000
-     ```
+ ```bash
+    cd frontend
+    npm install
+    npm run dev
+    # Visit http://localhost:3000
+ ```
 
 🔌 API Endpoints
-Route	Method	Description
-/api/stream	GET	MJPEG live stream
-/api/snapshot	GET	Single JPEG snapshot
-/api/config	GET/POST	View or update camera settings
-/api/archive	GET	List & download past captures
+
+    Route	Method	Description
+    
+    /api/stream	GET	MJPEG live stream
+    
+    /api/snapshot	GET	Single JPEG snapshot
+    
+    /api/config	GET/POST	View or update camera settings
+    
+    /api/archive	GET	List & download past captures
+    
 <details> <summary>Example: Snapshot</summary>
 
 </details>
@@ -92,4 +98,4 @@ Route	Method	Description
 
 Distributed under the MIT License. See LICENSE for details.
 
-    Built with passion by Kuba “argent_dis” S. — bringing high-end monitoring to life 🚀
+    Built with passion by Jakub S. — bringing high-end monitoring to life 🚀
