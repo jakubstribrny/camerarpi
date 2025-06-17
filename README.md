@@ -18,7 +18,7 @@
 
 ## 🔥 Overview
 
-CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-latency** monitoring station—ideal for workshops, production lines, or any remote-watch scenario. Think real-time snapshots, optional recording, and a slick web dashboard.
+CameraRPI transforms a humble Raspberry Pi & HQ Cam into a **robust**, **low-latency** monitoring station—ideal for workshops, production lines, or any remote-watch scenario. Think real-time snapshots, optional recording, and a slick web dashboard.
 <p align="center">
 <img src="https://cdn.discordapp.com/attachments/885247213209534514/1384266382354546688/image.png?ex=6851ce07&is=68507c87&hm=e6a6432ba9e5ec9b5a557dc8f7f465a5aba0aae46ad15fe83c19874b0f1f7a6c&" />
 </p>
@@ -65,7 +65,7 @@ CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-la
 
 🔌 API Endpoints
 
-    Route	Method	Description
+    Route	Method	Description - Idea
     
     /api/stream	GET	MJPEG live stream
     
@@ -80,9 +80,9 @@ CameraRPI transforms a humble Raspberry Pi & USB cam into a **robust**, **low-la
 </details>
 🏗️ Architecture
 
-    Raspberry Pi + USB Cam ↔️ FastAPI Server
+    Raspberry Pi + HQ Camera ↔️ FastAPI Server
 
-    FastAPI ↔️ Next.js Frontend (React + Tailwind)
+    FastAPI ↔️ Next.js Frontend (Next.js + Tailwind)
 
 🤝 Work done by
 
